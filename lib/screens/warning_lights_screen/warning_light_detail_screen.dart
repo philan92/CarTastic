@@ -24,7 +24,7 @@ class WarningLightDetailScreen extends StatelessWidget {
           children: [
             Container(
               child: Hero(
-                tag: 'hero1',
+                tag: warningLight.name,
                 child: Image.asset(
                   warningLight.imagePath,
                   alignment: Alignment.center,
@@ -34,7 +34,48 @@ class WarningLightDetailScreen extends StatelessWidget {
             SizedBox(
               height: 32,
             ),
-            Text(warningLight.meaning),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Bedeutung',
+                  style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 1.2),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                Text(
+                  warningLight.meaning,
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 1.2),
+                ),
+                SizedBox(
+                  height: 38,
+                ),
+                Text(
+                  'Wie muss ich reagieren?',
+                  style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 1.2),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                Text(
+                  warningLight.solution,
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w300,
+                      letterSpacing: 1.2),
+                ),
+              ],
+            ),
           ],
         ),
       ),

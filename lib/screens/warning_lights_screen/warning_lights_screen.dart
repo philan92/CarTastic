@@ -14,27 +14,28 @@ class WarningLightsScreen extends StatelessWidget {
       ),
       body: Container(
         color: kBackgroundColor1,
-        padding: EdgeInsets.all(18),
+        padding: EdgeInsets.all(18.0),
         child: Container(
-          child: Wrap(
+          padding: EdgeInsets.only(top: 18.0),
+          child: GridView.count(
+            primary: false,
+            crossAxisSpacing: 28,
+            mainAxisSpacing: 28,
+            crossAxisCount: 3,
             children: <Widget>[
               for (var warningLight in warningLights)
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => WarningLightDetailScreen(
-                                warningLight: warningLight),
-                          ));
-                    },
-                    child: Hero(
-                      tag: 'hero1',
-                      child: Image.asset(warningLight.imagePath),
-                    ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => WarningLightDetailScreen(
+                              warningLight: warningLight),
+                        ));
+                  },
+                  child: Hero(
+                    tag: warningLight.name,
+                    child: Image.asset(warningLight.imagePath),
                   ),
                 ),
             ],
