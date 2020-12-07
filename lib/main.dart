@@ -4,6 +4,7 @@ import 'package:klapperkiste/screens/car_management_screen/car_management_screen
 import 'package:klapperkiste/screens/home_screen/home_screen.dart';
 import 'package:klapperkiste/screens/repair_screen/repair_screen.dart';
 import 'package:klapperkiste/screens/repair_shop_screen/repair_shop_screen.dart';
+import 'package:klapperkiste/screens/warning_lights_screen/warning_light_detail_screen.dart';
 import 'package:klapperkiste/screens/warning_lights_screen/warning_lights_screen.dart';
 
 import 'constants.dart';
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
           '/car-management': (context) => CarManagementScreen(),
           '/car-maintenance': (context) => CarMaintenanceScreen(),
           '/warning-lights': (context) => WarningLightsScreen(),
+          '/warning-light-detail': (context) => WarningLightDetailScreen(),
           '/repair-shop': (context) => RepairShopScreen(),
         });
   }
