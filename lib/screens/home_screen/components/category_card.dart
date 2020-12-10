@@ -25,17 +25,18 @@ class CategoryCard extends StatelessWidget {
             onTap: onPress,
             borderRadius: BorderRadius.circular(30.0),
             splashColor: kPrimaryColor1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Container(
-                  child: icon,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 12.0, right: 12.0, bottom: 35.0, top: 6.0),
-                  child: Text(
+            child: Padding(
+              padding: const EdgeInsets.all(17.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    child: FittedBox(
+                      child: icon,
+                    ),
+                  ),
+                  Text(
                     headerText,
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -43,9 +44,9 @@ class CategoryCard extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),

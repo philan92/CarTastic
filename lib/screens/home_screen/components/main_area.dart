@@ -6,7 +6,7 @@ class MainArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      primary: true,
+      primary: false,
       physics: NeverScrollableScrollPhysics(),
       //padding: EdgeInsets.all(20),
       crossAxisSpacing: 20,
@@ -17,7 +17,7 @@ class MainArea extends StatelessWidget {
           headerText: 'Warnleuchten',
           icon: Icon(
             Icons.error,
-            size: 100,
+            //size: 100,
             color: kIconColor1,
           ),
           onPress: () {

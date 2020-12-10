@@ -41,6 +41,7 @@ class HomeScreen extends StatelessWidget {
         color: kBackgroundColor1,
         padding: EdgeInsets.all(18.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // Dein Auto Container
             Row(
@@ -77,45 +78,48 @@ class HomeScreen extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 52.0,
+              height: 12.0,
             ),
             Expanded(
-              flex: 3,
-              child: Container(
-                //alignment: Alignment.bottomCenter,
-                child: MainArea(),
-                decoration: BoxDecoration(
-                  color: kBackgroundColor1,
+              flex: 5,
+              child: Center(
+                child: AspectRatio(
+                  aspectRatio: 1 / 1,
+                  //alignment: Alignment.bottomCenter,
+                  child: MainArea(),
                 ),
               ),
             ),
             SizedBox(
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ForumCard(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ForumCard(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ForumCard(),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ForumCard(),
-                  ),
-                ],
+              height: 18,
+            ),
+            Expanded(
+              child: Container(
+                //height: 100,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: ForumCard(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: ForumCard(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: ForumCard(),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: ForumCard(),
+                    ),
+                  ],
+                ),
               ),
             ),
-            SizedBox(
-              height: 100,
-            ),
+
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
