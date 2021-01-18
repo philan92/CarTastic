@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.only(left: 8.0),
           child: SizedBox(
             height: 25.0,
-            child: Image.asset('assets/images/cartastic-logo1.png'),
+            child: Image.asset('assets/images/simplecar-logo.png'),
           ),
         ),
         actions: [

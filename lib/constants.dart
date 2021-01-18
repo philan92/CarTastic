@@ -17,13 +17,5 @@ const kTextColor1 = Color.fromRGBO(255, 255, 255, 0.7);
 const kIconColor1 = Color.fromRGBO(131, 147, 167, 1.0);
 const kPrimaryColor1 = Color.fromRGBO(252, 205, 0, 1.0);
 
-const kBackgroundGradientDecoration = BoxDecoration(
-  gradient: LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomRight, // 10% of the width, so there are ten blinds.
-    colors: [
-      kBackgroundColor1,
-      kBackgroundColor1GradientColor
-    ], // red to yellow
-  ),
-);
+
+

@@ -15,68 +15,72 @@ class WarningLightDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(warningLight.name),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        color: kBackgroundColor1,
-        padding: EdgeInsets.all(18),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              child: Hero(
-                tag: warningLight.name,
-                child: Image.asset(
-                  warningLight.imagePath,
-                  alignment: Alignment.center,
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          color: kBackgroundColor1,
+          padding: EdgeInsets.all(18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                child: Hero(
+                  tag: warningLight.name,
+                  child: Image.asset(
+                    warningLight.imagePath,
+                    alignment: Alignment.center,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 32,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Bedeutung',
-                  style: TextStyle(
-                      fontSize: 27,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 1.2),
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  warningLight.meaning,
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 1.2),
-                ),
-                SizedBox(
-                  height: 38,
-                ),
-                Text(
-                  'Wie muss ich reagieren?',
-                  style: TextStyle(
-                      fontSize: 27,
-                      fontWeight: FontWeight.w500,
-                      letterSpacing: 1.2),
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  warningLight.solution,
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w300,
-                      letterSpacing: 1.2),
-                ),
-              ],
-            ),
-          ],
+              SizedBox(
+                height: 32,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Bedeutung',
+                    style: TextStyle(
+                        fontSize: 27,
+                        fontWeight: FontWeight.w300,
+                        letterSpacing: 1.2),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    warningLight.meaning,
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w300,
+                        height: 1.5,
+                        letterSpacing: 1.2),
+                  ),
+                  SizedBox(
+                    height: 38,
+                  ),
+                  Text(
+                    'Wie muss ich reagieren?',
+                    style: TextStyle(
+                        fontSize: 27,
+                        fontWeight: FontWeight.w300,
+                        letterSpacing: 1.2),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    warningLight.solution,
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w300,
+                        height: 1.5,
+                        letterSpacing: 1.2),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
